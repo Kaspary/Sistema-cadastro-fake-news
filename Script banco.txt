@@ -1,0 +1,240 @@
+/*SET NEWS APPROVED*/
+/*UPDATE NEWS SET APPROVED = TRUE WHERE 2 = 2*/ 
+
+
+/*CREATE USER*/
+
+INSERT INTO USER
+( "ID", "EMAIL", "NAME", "PASSWORD", "PHOTO_IMAGE_NAME" )
+VALUES (1,'fulano@teste.com','Fulano da Silva','123456','user_photo_1.jpeg')
+
+INSERT INTO USER
+( "ID", "EMAIL", "NAME", "PASSWORD", "PHOTO_IMAGE_NAME" )
+VALUES (2,'beltrano@teste.com','Beltrano de Oliveira','123456','user_photo_2.png')
+
+
+
+/*CREATE NEWS*/
+
+
+/*NOVA NOTICIA COM DATA*/
+/*
+INSERT INTO NEWS
+( "ID", "APPROVED", "DATE", "FAKE_NEWS", "LINK", "PHOTO_IMAGE_NAME", "SUBTITLE", "TEXT", "TITLE", "USER_ID" ) 
+VALUES (
+    1, 
+    TRUE, 
+    2018-12-08 16:37:20.427, 
+    TRUE,  
+    'http://www.republiquedesmangues.fr/', 
+    'news_photo_1.jpg', 
+    'Donec velit tortor, lobortis et est lacinia', 
+    
+    'Sed aliquet, eros nec porta tristique, lorem ligula placerat dolor, sit amet convallis lorem velit ut quam. Quisque mattis hendrerit eros, et vehicula tortor fringilla eu. Suspendisse potenti. Aliquam massa diam, viverra vitae rhoncus eu, porttitor in nisi. Nam id quam fringilla, venenatis neque in, pulvinar lectus. Sed sed lacus vulputate, molestie ex sed, volutpat urna. Nullam quis mauris quam. Quisque dolor neque, tristique in sapien sit amet, molestie placerat ligula. Mauris nec congue eros, id tempor massa.
+
+    Etiam mollis velit ac massa finibus imperdiet. Suspendisse at diam nulla. Cras sit amet nunc vitae tortor auctor consectetur. Etiam finibus risus ac vulputate feugiat. Nunc at diam eget velit gravida gravida. Ut suscipit lacinia lectus, sed scelerisque justo fermentum ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa sit amet ipsum placerat rutrum. Aliquam odio ipsum, efficitur sed velit vel, tempor porta risus. Phasellus leo odio, consequat ac risus quis, suscipit consequat nisi.
+
+    Cras tempus pulvinar rutrum. Ut et arcu augue. Aliquam interdum nisi est, id semper libero mollis sed. Vivamus ultrices, tellus et tempus tempus, quam est ullamcorper lectus, a imperdiet orci odio sit amet neque. Nullam ac odio lectus. Morbi posuere mauris orci, a maximus risus malesuada a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam tempor blandit ligula, a tincidunt massa posuere sit amet. Duis at eros semper, hendrerit elit at, hendrerit dui. Ut varius, magna non vehicula ultricies, ligula quam ornare ex, quis tempus erat est id urna. Fusce et quam lacus. Nulla elementum neque et elit luctus, sit amet tincidunt magna ultrices.
+
+    Aenean ultricies sapien non luctus sollicitudin. Morbi interdum euismod justo et interdum. Maecenas in enim magna. Morbi ultricies a nibh ut placerat. Donec elementum pellentesque vestibulum. Curabitur eu velit finibus, congue nunc a, ultricies sapien. Ut commodo vehicula nisl sit amet volutpat. Morbi vehicula, lacus vitae blandit fermentum, orci nisl varius sem, quis laoreet nulla nisl at urna. Pellentesque ultrices sem ac semper mollis. Proin at tempus lacus. Morbi a massa ipsum. Pellentesque est augue, vestibulum in tortor eget, maximus aliquam massa. Praesent viverra aliquam dolor, vitae pulvinar felis ultrices sed.', 
+    
+    'Proin in quam', 
+    1)
+
+INSERT INTO NEWS
+( "ID", "APPROVED", "DATE", "FAKE_NEWS", "LINK", "PHOTO_IMAGE_NAME", "SUBTITLE", "TEXT", "TITLE", "USER_ID" ) 
+VALUES (
+    2, 
+    TRUE, 
+    2018-12-06 16:37:20.427, 
+    FALSE,  
+    'http://www.koalastothemax.com/', 
+    'news_photo_2.jpg', 
+    'Vivamus pulvinar libero est, et sagittis orci ultricies vitae', 
+    
+    'Vestibulum ac odio iaculis, sagittis felis at, sodales odio. Fusce ut turpis tincidunt, posuere nisl at, mollis mi. Morbi sed nunc semper, placerat nisl sed, rutrum quam. Duis tincidunt lorem et venenatis pulvinar. Nullam non lorem dapibus, faucibus risus ut, ultricies mi. Nullam malesuada turpis et diam blandit dignissim. Duis cursus mi in lectus luctus, et lacinia est facilisis. Nam aliquam risus augue, vel iaculis erat semper et. Aenean congue diam arcu, quis laoreet velit efficitur in. Maecenas ac accumsan diam. Cras suscipit mollis massa vitae vehicula. Nullam mollis quam odio, eget porttitor tellus bibendum id. Aenean laoreet faucibus feugiat. Morbi bibendum purus a mauris sagittis consectetur. Proin ac dictum libero. Proin consectetur arcu sed magna sodales, quis auctor metus pretium.
+
+    Vivamus vel justo iaculis, dignissim est a, malesuada nibh. Vivamus pulvinar magna eu accumsan tincidunt. In dapibus justo euismod eleifend eleifend. Ut molestie diam ac mi consequat aliquam ut sit amet turpis. Duis sollicitudin dapibus nibh, a rutrum lectus lobortis a. Mauris euismod, augue id lobortis vehicula, lorem dui porttitor turpis, nec feugiat neque lorem a enim. Maecenas ac dapibus metus, at ultricies purus. Suspendisse potenti. Nullam placerat semper ante vel viverra.
+
+    Fusce tincidunt tortor est, eget faucibus nisi pulvinar quis. Pellentesque sit amet ante nec tellus semper cursus quis quis elit. Vestibulum suscipit aliquam hendrerit. Curabitur rhoncus tempus massa eu eleifend. Quisque tincidunt quam ex, ac elementum libero dictum vitae. Aliquam pellentesque sed felis eleifend dictum. Curabitur purus nisl, ultrices non dapibus in, varius quis nunc. Nam imperdiet lectus ultrices fringilla egestas. Curabitur pellentesque, neque et interdum consequat, quam tortor facilisis arcu, non sollicitudin neque lacus eget orci. Etiam hendrerit libero nunc, ut sagittis purus placerat at.
+
+    Etiam laoreet in sapien sed feugiat. Suspendisse dictum, magna id sollicitudin placerat, erat felis molestie enim, sed cursus tortor nunc at tellus. Quisque vel sem diam. Curabitur vitae justo vitae mi elementum bibendum. Proin non faucibus diam. Aenean viverra orci magna, vel pharetra mauris hendrerit malesuada. Vivamus auctor nisi sed convallis suscipit. Phasellus urna magna, porttitor vel eros ut, imperdiet aliquet risus.', 
+    
+    'Class aptent taciti', 
+    1)
+
+
+
+INSERT INTO NEWS
+( "ID", "APPROVED", "DATE", "FAKE_NEWS", "LINK", "PHOTO_IMAGE_NAME", "SUBTITLE", "TEXT", "TITLE", "USER_ID" ) 
+VALUES (
+    3, 
+    TRUE, 
+    2018-12-06 16:37:20.427, 
+    TRUE,  
+    'http://corndog.io/', 
+    'news_photo_3.jpg', 
+    'Nunc pharetra velit nec mauris tempus', 
+    
+    'Quisque ultrices pharetra risus. Curabitur convallis lacus quis vehicula sollicitudin. Fusce maximus vehicula ex. Quisque laoreet velit vel facilisis tincidunt. Donec maximus auctor massa at rutrum. Nulla vel nisl ac urna maximus egestas. Donec placerat feugiat nisi et hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras rhoncus eu ante quis hendrerit. Sed rhoncus pretium mauris, ut lobortis ante auctor ut.
+
+    Donec ex massa, posuere ac aliquet condimentum, semper ut arcu. Ut id dolor finibus, placerat ex dignissim, facilisis nulla. Maecenas elementum elementum risus, a venenatis ex pulvinar in. In enim dolor, venenatis vel ante eu, interdum ultricies nibh. Aliquam tincidunt ornare augue eget egestas. Donec blandit augue a vestibulum vestibulum. In mattis lorem at leo maximus, eget bibendum orci imperdiet. Duis egestas ut risus convallis facilisis. Ut maximus egestas nulla, eu accumsan diam laoreet at. Vivamus luctus maximus erat eget pretium. Suspendisse efficitur, enim non efficitur sagittis, lectus dui accumsan neque, lacinia consequat felis augue vitae metus. Proin convallis erat in ante tempor suscipit. Etiam ut lacus neque.
+
+    Donec et diam nibh. Nunc eu vehicula odio. Mauris ut nisi massa. Etiam viverra purus vitae tellus porta feugiat. Vestibulum fringilla cursus libero, in venenatis mi euismod ac. Integer ac sapien quis urna egestas maximus at vel tellus. Integer urna tellus, gravida at varius sed, tempus sed quam.
+
+    Donec eget sollicitudin dolor, sed maximus diam. Donec est urna, auctor sed dictum sed, lacinia in magna. Sed semper nunc nec leo bibendum, a pharetra diam maximus. Nullam at ligula id tortor rutrum elementum vitae sit amet metus. Donec vel finibus mi, vitae ultricies diam. Proin facilisis suscipit tempor. Nullam sit amet gravida magna. Phasellus molestie, mi sit amet sodales suscipit, nisi est imperdiet felis, id aliquet nulla diam a quam. Curabitur a lorem tincidunt, faucibus mauris tristique, ultrices sem. Morbi sed libero in libero ullamcorper efficitur.
+
+    Aliquam erat volutpat. Donec iaculis elementum feugiat. Aliquam dapibus tortor nec convallis rutrum. Donec viverra suscipit erat, eget euismod justo ullamcorper id. Cras tempus bibendum felis, in efficitur nulla tristique et. Quisque eget fermentum orci. Sed nec fringilla odio. Duis iaculis ante mauris, molestie egestas nunc dictum vel. Quisque molestie, ex sodales facilisis luctus, nibh magna tempus urna, non efficitur risus ligula id diam. Aliquam erat volutpat. Nunc porta iaculis placerat.', 
+    
+    'Nulla quam felis', 
+    2)
+
+*/
+
+    
+/*NOTICIAS SEM DATA*/
+INSERT INTO NEWS
+( "ID", "APPROVED", "FAKE_NEWS", "LINK", "PHOTO_IMAGE_NAME", "SUBTITLE", "TEXT", "TITLE", "USER_ID" ) 
+VALUES (
+    1, 
+    TRUE,
+    TRUE,  
+    'http://www.republiquedesmangues.fr/', 
+    'news_photo_1.jpg', 
+    'Donec velit tortor, lobortis et est lacinia', 
+    
+    'Sed aliquet, eros nec porta tristique, lorem ligula placerat dolor, sit amet convallis lorem velit ut quam. Quisque mattis hendrerit eros, et vehicula tortor fringilla eu. Suspendisse potenti. Aliquam massa diam, viverra vitae rhoncus eu, porttitor in nisi. Nam id quam fringilla, venenatis neque in, pulvinar lectus. Sed sed lacus vulputate, molestie ex sed, volutpat urna. Nullam quis mauris quam. Quisque dolor neque, tristique in sapien sit amet, molestie placerat ligula. Mauris nec congue eros, id tempor massa.
+
+    Etiam mollis velit ac massa finibus imperdiet. Suspendisse at diam nulla. Cras sit amet nunc vitae tortor auctor consectetur. Etiam finibus risus ac vulputate feugiat. Nunc at diam eget velit gravida gravida. Ut suscipit lacinia lectus, sed scelerisque justo fermentum ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae massa sit amet ipsum placerat rutrum. Aliquam odio ipsum, efficitur sed velit vel, tempor porta risus. Phasellus leo odio, consequat ac risus quis, suscipit consequat nisi.
+
+    Cras tempus pulvinar rutrum. Ut et arcu augue. Aliquam interdum nisi est, id semper libero mollis sed. Vivamus ultrices, tellus et tempus tempus, quam est ullamcorper lectus, a imperdiet orci odio sit amet neque. Nullam ac odio lectus. Morbi posuere mauris orci, a maximus risus malesuada a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam tempor blandit ligula, a tincidunt massa posuere sit amet. Duis at eros semper, hendrerit elit at, hendrerit dui. Ut varius, magna non vehicula ultricies, ligula quam ornare ex, quis tempus erat est id urna. Fusce et quam lacus. Nulla elementum neque et elit luctus, sit amet tincidunt magna ultrices.
+
+    Aenean ultricies sapien non luctus sollicitudin. Morbi interdum euismod justo et interdum. Maecenas in enim magna. Morbi ultricies a nibh ut placerat. Donec elementum pellentesque vestibulum. Curabitur eu velit finibus, congue nunc a, ultricies sapien. Ut commodo vehicula nisl sit amet volutpat. Morbi vehicula, lacus vitae blandit fermentum, orci nisl varius sem, quis laoreet nulla nisl at urna. Pellentesque ultrices sem ac semper mollis. Proin at tempus lacus. Morbi a massa ipsum. Pellentesque est augue, vestibulum in tortor eget, maximus aliquam massa. Praesent viverra aliquam dolor, vitae pulvinar felis ultrices sed.', 
+    
+    'Proin in quam', 
+    1)
+
+INSERT INTO NEWS
+( "ID", "APPROVED", "FAKE_NEWS", "LINK", "PHOTO_IMAGE_NAME", "SUBTITLE", "TEXT", "TITLE", "USER_ID" ) 
+VALUES (
+    2, 
+    TRUE,
+    FALSE,  
+    'http://www.koalastothemax.com/', 
+    'news_photo_2.jpg', 
+    'Vivamus pulvinar libero est, et sagittis orci ultricies vitae', 
+    
+    'Vestibulum ac odio iaculis, sagittis felis at, sodales odio. Fusce ut turpis tincidunt, posuere nisl at, mollis mi. Morbi sed nunc semper, placerat nisl sed, rutrum quam. Duis tincidunt lorem et venenatis pulvinar. Nullam non lorem dapibus, faucibus risus ut, ultricies mi. Nullam malesuada turpis et diam blandit dignissim. Duis cursus mi in lectus luctus, et lacinia est facilisis. Nam aliquam risus augue, vel iaculis erat semper et. Aenean congue diam arcu, quis laoreet velit efficitur in. Maecenas ac accumsan diam. Cras suscipit mollis massa vitae vehicula. Nullam mollis quam odio, eget porttitor tellus bibendum id. Aenean laoreet faucibus feugiat. Morbi bibendum purus a mauris sagittis consectetur. Proin ac dictum libero. Proin consectetur arcu sed magna sodales, quis auctor metus pretium.
+
+    Vivamus vel justo iaculis, dignissim est a, malesuada nibh. Vivamus pulvinar magna eu accumsan tincidunt. In dapibus justo euismod eleifend eleifend. Ut molestie diam ac mi consequat aliquam ut sit amet turpis. Duis sollicitudin dapibus nibh, a rutrum lectus lobortis a. Mauris euismod, augue id lobortis vehicula, lorem dui porttitor turpis, nec feugiat neque lorem a enim. Maecenas ac dapibus metus, at ultricies purus. Suspendisse potenti. Nullam placerat semper ante vel viverra.
+
+    Fusce tincidunt tortor est, eget faucibus nisi pulvinar quis. Pellentesque sit amet ante nec tellus semper cursus quis quis elit. Vestibulum suscipit aliquam hendrerit. Curabitur rhoncus tempus massa eu eleifend. Quisque tincidunt quam ex, ac elementum libero dictum vitae. Aliquam pellentesque sed felis eleifend dictum. Curabitur purus nisl, ultrices non dapibus in, varius quis nunc. Nam imperdiet lectus ultrices fringilla egestas. Curabitur pellentesque, neque et interdum consequat, quam tortor facilisis arcu, non sollicitudin neque lacus eget orci. Etiam hendrerit libero nunc, ut sagittis purus placerat at.
+
+    Etiam laoreet in sapien sed feugiat. Suspendisse dictum, magna id sollicitudin placerat, erat felis molestie enim, sed cursus tortor nunc at tellus. Quisque vel sem diam. Curabitur vitae justo vitae mi elementum bibendum. Proin non faucibus diam. Aenean viverra orci magna, vel pharetra mauris hendrerit malesuada. Vivamus auctor nisi sed convallis suscipit. Phasellus urna magna, porttitor vel eros ut, imperdiet aliquet risus.', 
+    
+    'Class aptent taciti', 
+    1)
+
+
+
+INSERT INTO NEWS
+( "ID", "APPROVED", "FAKE_NEWS", "LINK", "PHOTO_IMAGE_NAME", "SUBTITLE", "TEXT", "TITLE", "USER_ID" ) 
+VALUES (
+    3, 
+    TRUE,
+    TRUE,  
+    'http://corndog.io/', 
+    'news_photo_3.jpg', 
+    'Nunc pharetra velit nec mauris tempus', 
+    
+    'Quisque ultrices pharetra risus. Curabitur convallis lacus quis vehicula sollicitudin. Fusce maximus vehicula ex. Quisque laoreet velit vel facilisis tincidunt. Donec maximus auctor massa at rutrum. Nulla vel nisl ac urna maximus egestas. Donec placerat feugiat nisi et hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras rhoncus eu ante quis hendrerit. Sed rhoncus pretium mauris, ut lobortis ante auctor ut.
+
+    Donec ex massa, posuere ac aliquet condimentum, semper ut arcu. Ut id dolor finibus, placerat ex dignissim, facilisis nulla. Maecenas elementum elementum risus, a venenatis ex pulvinar in. In enim dolor, venenatis vel ante eu, interdum ultricies nibh. Aliquam tincidunt ornare augue eget egestas. Donec blandit augue a vestibulum vestibulum. In mattis lorem at leo maximus, eget bibendum orci imperdiet. Duis egestas ut risus convallis facilisis. Ut maximus egestas nulla, eu accumsan diam laoreet at. Vivamus luctus maximus erat eget pretium. Suspendisse efficitur, enim non efficitur sagittis, lectus dui accumsan neque, lacinia consequat felis augue vitae metus. Proin convallis erat in ante tempor suscipit. Etiam ut lacus neque.
+
+    Donec et diam nibh. Nunc eu vehicula odio. Mauris ut nisi massa. Etiam viverra purus vitae tellus porta feugiat. Vestibulum fringilla cursus libero, in venenatis mi euismod ac. Integer ac sapien quis urna egestas maximus at vel tellus. Integer urna tellus, gravida at varius sed, tempus sed quam.
+
+    Donec eget sollicitudin dolor, sed maximus diam. Donec est urna, auctor sed dictum sed, lacinia in magna. Sed semper nunc nec leo bibendum, a pharetra diam maximus. Nullam at ligula id tortor rutrum elementum vitae sit amet metus. Donec vel finibus mi, vitae ultricies diam. Proin facilisis suscipit tempor. Nullam sit amet gravida magna. Phasellus molestie, mi sit amet sodales suscipit, nisi est imperdiet felis, id aliquet nulla diam a quam. Curabitur a lorem tincidunt, faucibus mauris tristique, ultrices sem. Morbi sed libero in libero ullamcorper efficitur.
+
+    Aliquam erat volutpat. Donec iaculis elementum feugiat. Aliquam dapibus tortor nec convallis rutrum. Donec viverra suscipit erat, eget euismod justo ullamcorper id. Cras tempus bibendum felis, in efficitur nulla tristique et. Quisque eget fermentum orci. Sed nec fringilla odio. Duis iaculis ante mauris, molestie egestas nunc dictum vel. Quisque molestie, ex sodales facilisis luctus, nibh magna tempus urna, non efficitur risus ligula id diam. Aliquam erat volutpat. Nunc porta iaculis placerat.', 
+    
+    'Nulla quam felis', 
+    2)
+
+
+/*CREATE COMMENT*/
+
+/*COMENTARIO COM DATA*/
+/*
+INSERT INTO COMMENT
+( "ID", "COMMENT", "DATE", "NEWS_ID", "USER_ID" )
+VALUES (1,
+        'Cras nec tristique neque. Ut nisl quam, suscipit sit amet laoreet et, placerat sed dui. Donec in suscipit sem. Cras a purus in dolor vestibulum consectetur viverra finibus magna.',
+        2018-12-06 16:37:20.427,
+        1,
+        2)
+
+
+INSERT INTO COMMENT
+( "ID", "COMMENT", "DATE", "NEWS_ID", "USER_ID" )
+VALUES (2,
+        'Donec vehicula consequat sapien, ac tincidunt lorem condimentum quis. Praesent venenatis bibendum lectus, quis pellentesque risus hendrerit sit amet. Etiam sit amet bibendum nibh.',
+        2018-12-06 16:37:20.427,
+        2,
+        2)
+
+INSERT INTO COMMENT
+( "ID", "COMMENT", "DATE", "NEWS_ID", "USER_ID" )
+VALUES (3,
+        'Nunc varius, erat et elementum finibus, elit nunc mattis tortor, a faucibus velit enim sodales neque. Sed porta nibh dui, at sagittis neque suscipit aliquam. Vivamus velit mauris, sollicitudin eget lacinia aliquet, porttitor et enim. ',
+        2018-12-06 16:37:20.427,
+        3,
+        1)
+
+*/
+
+/*COMENTARIO SEM DATA*/
+INSERT INTO COMMENT
+( "ID", "COMMENT", "NEWS_ID", "USER_ID" )
+VALUES (1,
+        'Cras nec tristique neque. Ut nisl quam, suscipit sit amet laoreet et, placerat sed dui. Donec in suscipit sem. Cras a purus in dolor vestibulum consectetur viverra finibus magna.',
+        1,
+        2)
+
+
+INSERT INTO COMMENT
+( "ID", "COMMENT", "NEWS_ID", "USER_ID" )
+VALUES (2,
+        'Donec vehicula consequat sapien, ac tincidunt lorem condimentum quis. Praesent venenatis bibendum lectus, quis pellentesque risus hendrerit sit amet. Etiam sit amet bibendum nibh.',
+        2,
+        2)
+
+INSERT INTO COMMENT
+( "ID", "COMMENT", "NEWS_ID", "USER_ID" )
+VALUES (3,
+        'Nunc varius, erat et elementum finibus, elit nunc mattis tortor, a faucibus velit enim sodales neque. Sed porta nibh dui, at sagittis neque suscipit aliquam. Vivamus velit mauris, sollicitudin eget lacinia aliquet, porttitor et enim. ',
+        3,
+        1)
+
+/*#######################################*/
+
+INSERT INTO COMMENT
+( "ID", "COMMENT", "NEWS_ID", "USER_ID" )
+VALUES (4,
+        'Nam feugiat elementum sem, ac ultrices metus commodo auctor. Vivamus molestie sodales quam in fermentum. Ut vel sem consequat, vehicula est vitae, lobortis nulla.',
+        1,
+        1)
+
+
+INSERT INTO COMMENT
+( "ID", "COMMENT", "NEWS_ID", "USER_ID" )
+VALUES (5,
+        'Curabitur dapibus varius augue vel malesuada. Ut maximus gravida lectus nec pellentesque. Nam semper sed est sit amet mollis.',
+        1,
+        2)
+
+INSERT INTO COMMENT
+( "ID", "COMMENT", "NEWS_ID", "USER_ID" )
+VALUES (6,
+        'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec posuere ex a massa dapibus eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;',
+        3,
+        2)
